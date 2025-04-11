@@ -2,7 +2,9 @@
 	"required": true,
 	"package": "dev.jade.backbone.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"mixins": [
+		"ArmorItemMixin"
+	],
 	"client": [],
 	"injectors": {
 		"defaultRequire": 1
