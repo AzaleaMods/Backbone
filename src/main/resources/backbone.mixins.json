@@ -3,7 +3,8 @@
 	"package": "dev.jade.backbone.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ArmorItemMixin"
+		"ArmorItemMixin",
+		"SpawnHelperMixin"
 	],
 	"client": [],
 	"injectors": {

@@ -35,9 +35,11 @@ public class ArmorItemMixin {
                 EntityAttributes.GENERIC_MOVEMENT_SPEED,
                 new EntityAttributeModifier(
                         id,
-                        HEAVY_MATERIALS.get(material) / 4.0, // We divide by 4.0 here to make sure that the correct
-                                                                // bonus is applied when the FULL set of armor is on,
-                                                                // rather than once per piece (way too much) :]
+                        HEAVY_MATERIALS.get(material) / 4.0, /*
+                                                                 We divide by 4.0 here to make sure that the correct
+                                                                 bonus is applied when the FULL set of armor is on,
+                                                                 rather than once per piece (way too much) :]
+                                                                */
                         EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                 ),
                 slot

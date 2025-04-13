@@ -1,6 +1,7 @@
 package dev.jade.backbone;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
@@ -24,11 +25,13 @@ public class BackboneMod implements ModInitializer {
             NETHERITE, -0.200
     );
 
+    public static final Map<EntityType<?>, EntityType<?>> DEEP_MOBS = Map.of(
+
+    );
+
     @Override
     public void onInitialize() {
-
         LOGGER.info("Loaded successfully");
-
     }
 
     public static Identifier id(String path) {
