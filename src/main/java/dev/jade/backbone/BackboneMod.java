@@ -1,5 +1,7 @@
 package dev.jade.backbone;
 
+import dev.jade.backbone.registry.BackboneItemComponents;
+import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ArmorMaterial;
@@ -31,7 +33,12 @@ public class BackboneMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
+        BackboneItemComponents.register();
+        BackboneItems.register();
+
         LOGGER.info("Loaded successfully");
+
     }
 
     public static Identifier id(String path) {
