@@ -12,17 +12,12 @@ import java.util.List;
 
 public class BackboneItemComponents {
 
-    public static final ComponentType<List<ItemStack>> CHARM_BAG = ComponentType.<List<ItemStack>>builder()
-            .codec(ItemStack.CODEC.listOf().fieldOf("charm_bag").codec())
-            .build();
-
     public static final ComponentType<Integer> TIME = ComponentType.<Integer>builder()
             .codec(Codec.INT.fieldOf("time").codec())
             .build();
 
     public static void register() {
 
-        registerComponent("charm_bag", CHARM_BAG);
         registerComponent("time", TIME);
 
     }
