@@ -5,12 +5,15 @@
 	"name": "Backbone",
 	"description": "An early game progression rework",
 	"authors": [
+		"Esperlite",
 		"Nitron",
 		"Mercury",
+		"ShivAngel",
+		"Sneakedy",
 		"Yak",
 		"Zarkanaseen"
 	],
-	"license": "CC0-1.0",
+	"license": "GNU LGPL v3",
 	"icon": "assets/backbone/icon.png",
 	"environment": "*",
 	"entrypoints": {
