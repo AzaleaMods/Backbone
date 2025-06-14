@@ -13,7 +13,7 @@ import java.util.List;
 public class BackboneItemComponents {
 
     public static final ComponentType<Integer> TIME = ComponentType.<Integer>builder()
-            .codec(Codec.INT.fieldOf("time").codec())
+            .codec(Codec.INT.orElse(0).fieldOf("time").codec())
             .build();
 
     public static void register() {

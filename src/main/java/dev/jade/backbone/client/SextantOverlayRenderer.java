@@ -27,7 +27,7 @@ public class SextantOverlayRenderer implements HudRenderCallback {
         if(!heldStack.isOf(BackboneItems.SEXTANT)) return;
 
         int time = heldStack.get(BackboneItemComponents.TIME);
-        if(time < player.age) return;
+        if(time <= player.age) return;
 
         int centerX = context.getScaledWindowWidth() / 2;
         int centerY = context.getScaledWindowHeight() / 2;

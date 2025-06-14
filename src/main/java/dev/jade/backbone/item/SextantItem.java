@@ -18,7 +18,7 @@ public class SextantItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
         if(!world.isClient()) {
-            user.getStackInHand(hand).set(BackboneItemComponents.TIME, user.age + 60);
+            user.getStackInHand(hand).set(BackboneItemComponents.TIME, user.age + 80);
         }
 
         return super.use(world, user, hand);
