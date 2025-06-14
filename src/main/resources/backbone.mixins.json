@@ -6,7 +6,9 @@
 		"ArmorItemMixin",
 		"SpawnHelperMixin"
 	],
-	"client": [],
+	"client": [
+		"client.DebugHudMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	}
