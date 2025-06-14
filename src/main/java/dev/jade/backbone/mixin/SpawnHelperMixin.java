@@ -1,7 +1,6 @@
 package dev.jade.backbone.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import dev.jade.backbone.BackboneMod;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.SpawnHelper;

@@ -3,6 +3,7 @@ package dev.jade.backbone;
 import dev.jade.backbone.registry.BackboneItemComponents;
 import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.impl.gametest.FabricGameTestModInitializer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.registry.entry.RegistryEntry;
