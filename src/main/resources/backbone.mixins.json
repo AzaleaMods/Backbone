@@ -1,15 +1,17 @@
 {
-	"required": true,
-	"package": "dev.jade.backbone.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ArmorItemMixin",
-		"SpawnHelperMixin"
-	],
-	"client": [
-		"client.DebugHudMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "dev.jade.backbone.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ArmorItemMixin",
+    "SpawnHelperMixin"
+  ],
+  "client": [
+    "client.ClientPlayerEntityMixin",
+    "client.DebugHudMixin",
+    "client.InGameHudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
