@@ -17,9 +17,7 @@ public class BackboneItemComponents {
             .build();
 
     public static void register() {
-
         registerComponent("time", TIME);
-
     }
 
     public static <T> void registerComponent(String name, ComponentType<T> component) {
