@@ -3,12 +3,8 @@ package dev.jade.backbone.registry;
 import com.mojang.serialization.Codec;
 import dev.jade.backbone.BackboneMod;
 import net.minecraft.component.ComponentType;
-import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.math.ChunkPos;
-
-import java.util.List;
 
 public class BackboneItemComponents {
 

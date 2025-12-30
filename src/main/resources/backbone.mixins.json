@@ -7,7 +7,6 @@
     "SpawnHelperMixin"
   ],
   "client": [
-    "client.ClientPlayerEntityMixin",
     "client.DebugHudMixin",
     "client.InGameHudMixin"
   ],
