@@ -15,9 +15,14 @@ public class BackboneItemComponents {
     public static final ComponentType<Integer> TIME = ComponentType.<Integer>builder()
             .codec(Codec.INT.orElse(0).fieldOf("time").codec())
             .build();
+    public static final ComponentType<Boolean> DEATH_PROTECTION = ComponentType.<Boolean>builder()
+            .codec(Codec.BOOL.orElse(false).fieldOf("death_protection").codec())
+            .build();
+
 
     public static void register() {
         registerComponent("time", TIME);
+        registerComponent("death_protection", DEATH_PROTECTION);
     }
 
     public static <T> void registerComponent(String name, ComponentType<T> component) {
