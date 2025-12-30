@@ -1,9 +1,9 @@
 package dev.jade.backbone;
 
+import dev.jade.backbone.registry.BackboneEntities;
 import dev.jade.backbone.registry.BackboneItemComponents;
 import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.impl.gametest.FabricGameTestModInitializer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -11,7 +11,6 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
 import java.util.Map;
 
 import static net.minecraft.item.ArmorMaterials.*;
@@ -29,12 +28,13 @@ public class BackboneMod implements ModInitializer {
     );
 
     public static final Map<EntityType<?>, EntityType<?>> DEEP_MOBS = Map.of(
-
+        EntityType.ZOMBIE, BackboneEntities.DEEP_ZOMBIE
     );
 
     @Override
     public void onInitialize() {
 
+        BackboneEntities.register();
         BackboneItemComponents.register();
         BackboneItems.register();
 

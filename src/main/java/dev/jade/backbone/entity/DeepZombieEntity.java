@@ -10,6 +10,4 @@ public class DeepZombieEntity extends ZombieEntity {
         super(entityType, world);
     }
 
-
-
 }

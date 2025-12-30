@@ -1,6 +1,5 @@
 package dev.jade.backbone.client;
 
-import dev.jade.backbone.BackboneMod;
 import dev.jade.backbone.registry.BackboneItemComponents;
 import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;

@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-import static dev.jade.backbone.BackboneMod.*;
+import static dev.jade.backbone.BackboneMod.DEEP_MOBS;
 
 @Mixin(SpawnHelper.class)
 public class SpawnHelperMixin {
