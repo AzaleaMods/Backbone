@@ -2,17 +2,17 @@ package dev.jade.backbone.registry;
 
 import com.mojang.serialization.Codec;
 import dev.jade.backbone.BackboneMod;
-import net.minecraft.component.ComponentType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 public class BackboneItemComponents {
 
-    public static final ComponentType<Integer> TIME = ComponentType.<Integer>builder()
-            .codec(Codec.INT.orElse(0).fieldOf("time").codec())
+    public static final DataComponentType<Integer> TIME = DataComponentType.<Integer>builder()
+            .persistent(Codec.INT.orElse(0).fieldOf("time").codec())
             .build();
-    public static final ComponentType<Boolean> DEATH_PROTECTION = ComponentType.<Boolean>builder()
-            .codec(Codec.BOOL.orElse(false).fieldOf("death_protection").codec())
+    public static final DataComponentType<Boolean> DEATH_PROTECTION = DataComponentType.<Boolean>builder()
+            .persistent(Codec.BOOL.orElse(false).fieldOf("death_protection").codec())
             .build();
 
 
@@ -21,8 +21,8 @@ public class BackboneItemComponents {
         registerComponent("death_protection", DEATH_PROTECTION);
     }
 
-    public static <T> void registerComponent(String name, ComponentType<T> component) {
-        Registry.register(Registries.DATA_COMPONENT_TYPE, BackboneMod.id(name), component);
+    public static <T> void registerComponent(String name, DataComponentType<T> component) {
+        Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, BackboneMod.id(name), component);
     }
 
 }

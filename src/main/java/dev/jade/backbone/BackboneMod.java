@@ -4,16 +4,17 @@ import dev.jade.backbone.registry.BackboneEntities;
 import dev.jade.backbone.registry.BackboneItemComponents;
 import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.entity.EntityType;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.equipment.ArmorMaterial;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import static net.minecraft.item.ArmorMaterials.*;
+import static net.minecraft.world.item.equipment.ArmorMaterials.*;
 
 public class BackboneMod implements ModInitializer {
 
@@ -21,7 +22,7 @@ public class BackboneMod implements ModInitializer {
     public static final String ID = "backbone";
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
-    public static final Map<RegistryEntry<ArmorMaterial>, Double> HEAVY_MATERIALS = Map.of(
+    public static final Map<ArmorMaterial, Double> HEAVY_MATERIALS = Map.of(
             IRON,      -0.100,
             GOLD,      -0.150,
             NETHERITE, -0.200
@@ -43,7 +44,11 @@ public class BackboneMod implements ModInitializer {
     }
 
     public static Identifier id(String path) {
-        return Identifier.of(ID, path);
+        return Identifier.fromNamespaceAndPath(ID, path);
+    }
+
+    public static <T> ResourceKey<T> key(ResourceKey<? extends Registry<T>> registry, String path) {
+        return ResourceKey.create(registry, id(path));
     }
 
 }

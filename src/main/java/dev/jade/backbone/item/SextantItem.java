@@ -1,27 +1,26 @@
 package dev.jade.backbone.item;
 
 import dev.jade.backbone.registry.BackboneItemComponents;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
 
 public class SextantItem extends Item {
 
-    public SextantItem(Settings settings) {
+    public SextantItem(Properties settings) {
         super(settings);
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public InteractionResult use(Level level, Player user, InteractionHand hand) {
 
-        if(!world.isClient()) {
-            user.getStackInHand(hand).set(BackboneItemComponents.TIME, user.age + 80);
+        if(!level.isClientSide()) {
+            user.getItemInHand(hand).set(BackboneItemComponents.TIME, user.tickCount + 80);
         }
 
-        return super.use(world, user, hand);
+        return super.use(level, user, hand);
 
     }
 
