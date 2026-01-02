@@ -21,6 +21,8 @@ public class BackboneLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder builder) {
 
         builder.add(BackboneItems.SEXTANT, "Sextant");
+        builder.add(BackboneItems.CLAYMORE, "Claymore");
+
         builder.add(BackboneEntities.DEEP_ZOMBIE, "Deep Zombie");
 
     }

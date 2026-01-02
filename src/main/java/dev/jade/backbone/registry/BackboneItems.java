@@ -19,6 +19,8 @@ public class BackboneItems {
             new SextantItem(properties.component(BackboneItemComponents.TIME, 0))
     );
 
+    public static final Item CLAYMORE = registerItem("claymore", Item::new);
+
     public static void register() {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> {

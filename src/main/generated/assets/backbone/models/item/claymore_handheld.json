@@ -1,0 +1,6 @@
+{
+  "parent": "backbone:item/great",
+  "textures": {
+    "layer0": "backbone:item/claymore_handheld"
+  }
+}
