@@ -2,6 +2,7 @@ package dev.jade.backbone.registry;
 
 import dev.jade.backbone.BackboneMod;
 import dev.jade.backbone.entity.DeepZombie;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -11,8 +12,11 @@ import net.minecraft.world.entity.MobCategory;
 
 public class BackboneEntities {
 
-    public static final EntityType<DeepZombie> DEEP_ZOMBIE = EntityType.Builder
-            .of(DeepZombie::new, MobCategory.MONSTER)
+    public static final EntityType<DeepZombie> DEEP_ZOMBIE = FabricEntityType.Builder
+            .createMob(
+                    DeepZombie::new,
+                    MobCategory.MONSTER,
+                    mob -> mob.defaultAttributes(DeepZombie::createAttributes))
             .sized(0.6F, 1.95F)
             .eyeHeight(1.74F)
             .passengerAttachments(2.0125F)

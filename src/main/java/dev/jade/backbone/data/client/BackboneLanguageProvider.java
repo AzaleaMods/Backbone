@@ -1,5 +1,6 @@
 package dev.jade.backbone.data.client;
 
+import dev.jade.backbone.registry.BackboneEntities;
 import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -20,6 +21,7 @@ public class BackboneLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder builder) {
 
         builder.add(BackboneItems.SEXTANT, "Sextant");
+        builder.add(BackboneEntities.DEEP_ZOMBIE, "Deep Zombie");
 
     }
 

@@ -3,7 +3,8 @@
   "package": "dev.jade.backbone.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "SpawnHelperMixin"
+    "BeaconBlockEntityMixin",
+    "NaturalSpawnerMixin"
   ],
   "client": [],
   "injectors": {
