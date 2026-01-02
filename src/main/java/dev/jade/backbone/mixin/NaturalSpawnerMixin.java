@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import static dev.jade.backbone.BackboneMod.DEEP_MOBS;
 
 @Mixin(NaturalSpawner.class)
-public class NaturalSpawnerMixin {
+public abstract class NaturalSpawnerMixin {
 
     @ModifyArg(
             method = "spawnCategoryForPosition(Lnet/minecraft/world/entity/MobCategory;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/NaturalSpawner$SpawnPredicate;Lnet/minecraft/world/level/NaturalSpawner$AfterSpawnCallback;)V",

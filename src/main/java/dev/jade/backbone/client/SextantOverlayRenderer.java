@@ -27,7 +27,7 @@ public class SextantOverlayRenderer implements HudElement {
         ItemStack heldStack = player.getMainHandItem();
         if(!heldStack.is(BackboneItems.SEXTANT)) return;
 
-        int time = heldStack.get(BackboneItemComponents.TIME);
+        int time = heldStack.getOrDefault(BackboneItemComponents.TIME, 0);
         if(time <= player.tickCount) return;
 
         int centerX = graphics.guiWidth() / 2;
