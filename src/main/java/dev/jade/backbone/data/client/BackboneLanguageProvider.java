@@ -20,6 +20,9 @@ public class BackboneLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder builder) {
 
+        builder.add("item.backbone.amulet.full", "Imbued Amulet");
+        builder.add("item.backbone.amulet.empty", "Drained Amulet");
+
         builder.add(BackboneItems.SEXTANT, "Sextant");
         builder.add(BackboneItems.CLAYMORE, "Claymore");
 

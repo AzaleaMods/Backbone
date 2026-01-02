@@ -5,6 +5,7 @@ import dev.jade.backbone.BackboneMod;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.util.Unit;
 
 public class BackboneItemComponents {
 
@@ -14,11 +15,14 @@ public class BackboneItemComponents {
     public static final DataComponentType<Boolean> DEATH_PROTECTION = DataComponentType.<Boolean>builder()
             .persistent(Codec.BOOL.orElse(false).fieldOf("death_protection").codec())
             .build();
-
+    public static final DataComponentType<Unit> FULL = DataComponentType.<Unit>builder()
+            .persistent(Unit.CODEC.fieldOf("full").codec())
+            .build();
 
     public static void register() {
         registerComponent("time", TIME);
         registerComponent("death_protection", DEATH_PROTECTION);
+        registerComponent("full", FULL);
     }
 
     public static <T> void registerComponent(String name, DataComponentType<T> component) {

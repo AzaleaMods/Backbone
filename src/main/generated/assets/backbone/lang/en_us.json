@@ -1,5 +1,7 @@
 {
   "entity.backbone.deep_zombie": "Deep Zombie",
+  "item.backbone.amulet.empty": "Drained Amulet",
+  "item.backbone.amulet.full": "Imbued Amulet",
   "item.backbone.claymore": "Claymore",
   "item.backbone.sextant": "Sextant"
 }

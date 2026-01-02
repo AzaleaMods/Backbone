@@ -1,6 +1,7 @@
 package dev.jade.backbone.data.client;
 
 import dev.jade.backbone.BackboneMod;
+import dev.jade.backbone.registry.BackboneItemComponents;
 import dev.jade.backbone.registry.BackboneItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -13,7 +14,10 @@ import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.client.renderer.item.properties.conditional.ComponentMatches;
+import net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperty;
 import net.minecraft.client.renderer.item.properties.select.DisplayContext;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 
@@ -50,6 +54,21 @@ public class BackboneModelProvider extends FabricModelProvider {
         generator.generateFlatItem(BackboneItems.SEXTANT, ModelTemplates.FLAT_ITEM);
 
         relicWeapon(BackboneItems.CLAYMORE, generator);
+
+        generator.generateBooleanDispatch(
+                BackboneItems.AMULET,
+                ItemModelUtils.hasComponent(BackboneItemComponents.FULL),
+                ItemModelUtils.plainModel(generator.createFlatItemModel(
+                        BackboneItems.AMULET,
+                        "_full",
+                        ModelTemplates.FLAT_ITEM
+                )),
+                ItemModelUtils.plainModel(generator.createFlatItemModel(
+                        BackboneItems.AMULET,
+                        "_empty",
+                        ModelTemplates.FLAT_ITEM
+                ))
+        );
 
     }
 

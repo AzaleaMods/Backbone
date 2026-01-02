@@ -1,0 +1,15 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "component": "backbone:full",
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "backbone:item/amulet_empty"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "backbone:item/amulet_full"
+    },
+    "property": "minecraft:has_component"
+  }
+}
