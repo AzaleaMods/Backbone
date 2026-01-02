@@ -18,7 +18,10 @@ public abstract class BeaconBlockEntityMixin extends BlockEntity {
         super(type, pos, state);
     }
 
-    @Inject(method = "tick", at = @At("TAIL"))
+    @Inject(
+            method = "tick",
+            at = @At("TAIL")
+    )
     private static void backbone$checkForAmulet(Level level, BlockPos pos, BlockState state, BeaconBlockEntity blockEntity, CallbackInfo ci) {
         // blah blah blah registry stuff
         if (level.getGameTime() % 5 == 0) {
